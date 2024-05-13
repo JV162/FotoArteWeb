@@ -31,7 +31,7 @@ function openPhotosGallery(weddingId) {
             }
         });
     }, {
-        rootMargin: '0px 0px 200px 0px', // Carga imágenes cuando están a 200px de entrar en el viewport
+        rootMargin: '0px 0px 10px 0px', // Carga imágenes cuando están a 200px de entrar en el viewport
         threshold: 0.01
     });
 
