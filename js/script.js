@@ -45,7 +45,7 @@ function openPhotosGallery(weddingId) {
             }
         });
     }, {
-        rootMargin: '0px 0px 10px 0px',
+        rootMargin: '0px 0px 200px 0px', // Carga imágenes cuando están a 200px de entrar en el viewport
         threshold: 0.01
     });
 
@@ -90,15 +90,4 @@ function switchImage(currentImage, targetImage) {
     currentImage.removeClass("active").fadeOut('fast', () => {
         targetImage.fadeIn('fast').addClass("active");
     });
-}
-
-// Función para animar los elementos de entrada en la página
-function animateEntryElements() {
-    gsap.from(".cover", { duration: 1, opacity: 0, y: 50, stagger: 0.2 });
-    gsap.from("#navigation-bar", { duration: 1.5, opacity: 0, y: -50 });
-}
-
-function showCustomMessage(message) {
-    $("#message-text").text(message);
-    $("#message-container").fadeIn(300).delay(3000).fadeOut(300); // Aparece, se mantiene 3 segundos y desaparece
 }
