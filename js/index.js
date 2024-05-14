@@ -198,3 +198,24 @@ function changePage() {
   currentPage.classList.remove('active');
   nextPage.classList.add('active');
 }
+
+// JavaScript para detectar el scroll y ocultar o mostrar el menú
+document.addEventListener("DOMContentLoaded", function() {
+  var lastScrollTop = 0;
+  var menubar = document.querySelector('.menubar');
+
+  window.addEventListener("scroll", function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+          // Bajando la página
+          menubar.style.opacity = '0';
+          menubar.style.transition = 'opacity 0.5s ease-in-out';
+      } else {
+          // Subiendo la página
+          menubar.style.opacity = '0.8';
+          menubar.style.transition = 'opacity 0.5s ease-in-out';
+      }
+      lastScrollTop = scrollTop;
+  });
+});

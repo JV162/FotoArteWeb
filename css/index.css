@@ -1,7 +1,7 @@
 /*!
-  * Item: Willy Wonka Theme
-  * Description: Personal Portfolio Website Template
-  * Author/Developer: Sujal
+  * Item: Photografy
+  * Description: Pagina web para fotografo de bodas
+  * Author/Developer: Javier Viloria
   * Version: v1
   */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
@@ -24,7 +24,7 @@
     transition: all .4s ease;
   }
   ::-webkit-scrollbar-track {
-    background: #101010; 
+    background: #082f49; 
     border-radius: 4px;
     width: 4px;
   }
@@ -61,6 +61,7 @@ body{
     overflow-x: hidden;
     width: 100%;
     background: #171717;
+    
 }
 #header{
     background:#171717;
@@ -82,7 +83,7 @@ body{
     display: block;
 }
 #navigation-content{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position:fixed;
     z-index: 5;
@@ -104,8 +105,8 @@ body{
 }
 .menubar{
     position: absolute;
-    right:100vh;
-    top: 4vh;
+    right:49%;
+    top: 50%;
     cursor: pointer;
     opacity: .8;
     transition: all .4s ease;
@@ -182,10 +183,9 @@ body{
     transform: rotate(-45deg);
 }
 .navigation-close{
-    position: fixed;
-    top: 6%;
-    right:50%;
-    padding: 10px;
+    position: absolute;
+    top: 8%;
+    right:49%;
     cursor: pointer;
     transition: all.3s ease;
     opacity: .8;
@@ -208,6 +208,7 @@ body{
     opacity: 1;
     transform: rotate(-45deg);
 }
+
 #navigation-bar img{
     height: 80px;
     position: absolute;
@@ -227,7 +228,7 @@ body{
     float: top;
 }
 .header-image{
-    float: right;
+    float:right;
     height: auto;
     background-size: cover;
     background-position: center;
@@ -2553,11 +2554,28 @@ for tabs and large phones
 /* Estilos para el título */
 h1 {
     text-align: center; /* Centrar el texto horizontalmente */
-    color: #ff0000; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     font-size: 5em; /* Tamaño de la fuente */
-    margin-top: 20px; /* Espacio superior */
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-top: 5%; /* Espacio superior */
+    margin-bottom: 5%; /* Espacio inferior */
     font-family: poppins;
+    font-size: 10vh; /* Tamaño del texto */
+}
+h3 {
+    color: #ffffff; /* Cambia el color del texto */
+    font-family: 'poppins'; /* Tipo de fuente */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 18p; /* Espacio debajo del encabezado */
+    font-size: 4vh; /* Tamaño del texto */
+}
+
+p {
+    color: #ffffff; /* Cambia el color del texto */
+    font-family: 'poppins'; /* Tipo de fuente */
+    font-size: 3vh; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 15px; /* Espacio debajo de cada párrafo */
 }
 
 /* Estilos para el contenedor de pestañas de álbum */
@@ -2635,11 +2653,16 @@ h1 {
 }
 
 .cover img {
+    transition: transform 0.3s ease; /* Suaviza la transición */
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 20px;
+}
+
+.cover:hover img {
+    transform: scale(0.91); /* Aumenta el tamaño de la imagen */
 }
 
 .overlay {
@@ -2655,11 +2678,18 @@ h1 {
     border-radius: 20px;
 }
 
-.name,
-.description {
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    transform: translateY(20px);
+h2.name {
+    font-size: 18px; /* Tamaño de la fuente para los títulos h2 con clase 'name' */
+    color: #ffffff; /* Color del texto */
+    font-family: 'poppins'; /* Tipo de fuente */
+    text-align: center; /* Alineación del texto */
+}
+
+p.description {
+    font-size: 14px; /* Tamaño de la fuente para los párrafos con clase 'description' */
+    color: #ffffff; /* Color del texto */
+    font-family: 'poppins'; /* Tipo de fuente */
+    text-align: center; /* Alineación del texto */    
 }
 
 .cover:hover .overlay,
@@ -2671,6 +2701,8 @@ h1 {
 .cover:focus .name {
     opacity: 1;
     transform: translateZ(50px);
+    text-align: center; /* Alineación del texto */
+
 }
 
 .cover:hover .description,
@@ -2678,21 +2710,30 @@ h1 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.5s; /* Retraso en la animación para que aparezca después del nombre */
+    text-align: center; /* Alineación del texto */
+
 }
+
 
 /* Estilos para el contenido de las portadas */
 .cover h2 {
     margin: 0;
+    text-align: center; /* Alineación del texto */
+
 }
 
 .cover p {
     margin: 5vh 0;
     display: none; /* Oculta la descripción por defecto */
+    text-align: center; /* Alineación del texto */
+
 }
 
 .cover:hover p,
 .cover:focus p {
     display: block; /* Muestra la descripción cuando el cursor pasa sobre la imagen */
+    text-align: center; /* Alineación del texto */
+
 }
 
 @media (hover: none) {
@@ -2705,6 +2746,8 @@ h1 {
 
     .cover p {
         display: block;
+        text-align: center; /* Alineación del texto */
+
     }
 }
 
@@ -2759,11 +2802,18 @@ h1 {
 
 #close {
     color: #fff;
-    font-size: 7vh;
-    top: 1vh;
+    font-size: 6vh;
     right: 10vh; /* Asegúrate de especificar unidades (por ejemplo, px) */
-    cursor: pointer;
+    transition: transform 0.3s ease; /* Suaviza la transición */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    display: block; /* Asegura que el botón es un bloque para aplicar transformaciones */
     width: 100%;
+}
+#close:hover {
+    transform: scale(1.5); /* Aumenta el tamaño del botón en un 50% al pasar el mouse */
+}
+.cover:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
 }
 
 #modal-image {
@@ -2796,11 +2846,9 @@ h1 {
     background: none;
     border: none;
     color: white;
-    font-size: 2em;
+    font-size: 3em; /* Aumentado para hacer los botones un poco más grandes */
     cursor: pointer;
     transition: transform 0.3s ease;
-    
-    
 }
 
 .navigation button:hover {
@@ -2809,9 +2857,9 @@ h1 {
 }
 
 #prev {
-    left: 3vh;
+    left: 1vh; /* Ajustado aún más para acercar al modal */
 }
 
 #next {
-    right: 3vh;
+    right: 1vh; /* Ajustado aún más para acercar al modal */
 }
