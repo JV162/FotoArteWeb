@@ -193,7 +193,7 @@ body{
     transform: rotate(90deg);
 }
 .logo img{
-    height: 80px;
+    height: 12vh;
     position: absolute;
     top: 3%;
     left: 2.5%;
@@ -208,7 +208,7 @@ body{
 }
 
 #navigation-bar img{
-    height: 80px;
+    height: 12vh;
     position: absolute;
     ;
     top: 15%;
@@ -232,7 +232,6 @@ body{
     background-position: center;
     width: 40%;   
     height: 100vh;
-
 }
 .header-content{
     height: 100vh;
@@ -245,16 +244,16 @@ body{
     color: whitesmoke;
     font-family: raleway;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.01vh;
     flex-direction: column;
-    font-size: 50px;
+    font-size: 10vh;
     z-index: 1;
 }
 .header-content-box{
     z-index: 2;
     text-align: center;
     height: auto;
-    padding-right: 60px;
+    padding-right: 25vh;
     width: auto;
 
 }
@@ -262,12 +261,12 @@ body{
     z-index: 2;
     font-weight:700;
     font-family: poppins;
-    font-size: 65px;
+    font-size: 10vh;
 }
 .header-content .secondline{
     z-index: 2;
-    font-size: 30px;
-    padding-top:20px ;
+    font-size: 4vh;
+    padding-top:5vh ;
     font-weight:500;
     color: rgb(255, 255, 255,.8);
 }
@@ -331,7 +330,7 @@ body{
     padding:10px;
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 5vh;
     opacity: .7;
     transition: all .4s ease;
 }
@@ -341,26 +340,26 @@ body{
 .navigation-links a::before{
     content: "";
     position: absolute;
-    top:50%;
-    left: 50%;
+    top:50vh;
+    left: 100vh;
     display: flex;
     justify-content: center;
     transform: translate(-50%,-50%);
     align-items: center;
     font-size: 5em;
-    font-weight: 400;
+    font-weight: 400vh;
     font-family: monoton;
     color:rgb(255, 255, 255,.1);
     z-index: 1;
     pointer-events: none;
     opacity: 0;
-    letter-spacing: 100px;
+    letter-spacing: 1vh;
     transition: all .4s ease;
 }
 .navigation-links a:hover::before{
     content: attr(data-text);
     opacity: 1;
-    letter-spacing: 10px;
+    letter-spacing: 2%;
 }
 .contact{
     display: flex;
