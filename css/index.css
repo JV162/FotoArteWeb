@@ -385,6 +385,11 @@ body{
 .contact img:hover{
     opacity: 1;
     transform: scale(1.1);
+ @media only screen and (max-width: 768px) {
+    body, #header, #navigation-content, #navigation-bar, .menubar, .close-first, .close-second, .navigation-close, .logo img, #navigation-bar img, .header-image, .header-content, .header-content-box, .header-content .firstline, .header-content .secondline, .social-media-links, .social-media, .navigation-links, .navigation-links a, .contact, .contact a, .contact img {
+        text-align: center;
+    }
+}
 }
 .color{
     color: #c70039;
