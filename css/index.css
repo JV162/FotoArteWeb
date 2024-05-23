@@ -4,9 +4,7 @@
   * Author/Developer: Javier Viloria
   * Version: v1
   */
-@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
+
 *{
     padding: 0%;
     margin: 0%;
@@ -421,23 +419,6 @@ body{
     height: auto;
     overflow: hidden;
 }
-@keyframes scale{
-    0%{
-        transform: scale(.6);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-@-webkit-keyframes breakeranimate{
-    0%{
-        transform: scale(.6);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-    
 
 #about-content{
     display: flex;
@@ -2863,3 +2844,21 @@ p.description {
 #next {
     right: 1vh; /* Ajustado aún más para acercar al modal */
 }
+
+    .construction-message {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .construction-message.show {
+        opacity: 1;
+    }

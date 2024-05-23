@@ -51,7 +51,7 @@ function openPhotosGallery(weddingId) {
 
     // Carga y observa cada imagen en la galería
     for (let i = 1; i <= maxImages; i++) {
-        const imageSrc = `images/${weddingId}/${i}.png`;
+        const imageSrc = `images/${weddingId}/${i}.webp`;
         const img = $("<img>")
             .attr("data-src", imageSrc)
             .addClass("gallery-image")
