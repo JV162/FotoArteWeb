@@ -42,12 +42,6 @@
             <span class="color">larry</span>Escarraman 
         </div>
     <!--loader-end-->
-    <!--link-screen-->
-        <div id="breaker">
-        </div>
-        <div id="breaker-two">
-        </div>
-    <!--link-screen-->
         <!--Main-Section-->
         <!--Navigator-fullscreen-->
         <div id="navigation-content">
@@ -573,10 +567,14 @@
             constructionMessage.textContent = "Página en construcción";
             constructionMessage.classList.add("construction-message");
             document.body.appendChild(constructionMessage);
-    
+        
             setTimeout(function() {
                 constructionMessage.classList.add("show");
-            }, 1000); // Ajusta el tiempo de espera para mostrar el mensaje (en milisegundos)
+            }, 1); // El mensaje se mostrará después de 1 segundo (1000 milisegundos)
+
+            setTimeout(function() {
+                constructionMessage.classList.remove("show");
+            }, 2000); // El mensaje desaparecerá después de 10 segundos (10000 milisegundos)
         });
     </script>
 </body>

@@ -91,3 +91,7 @@ function switchImage(currentImage, targetImage) {
         targetImage.fadeIn('fast').addClass("active");
     });
 }
+// Función para animar elementos de entrada al cargar el documento
+function animateEntryElements() {
+    // Código para animar elementos de entrada
+}

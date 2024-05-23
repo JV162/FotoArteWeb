@@ -87,77 +87,41 @@ $(function(){
 })
 $(function(){
 
-    $('#about-link').on('click',function(){
-      gsap.to('#navigation-content',0,{display:"none",delay:.7});
-      gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
-  gsap.to('#header',0,{display:"none"});
-gsap.to('#blog',0,{display:"none"});
-gsap.to('#portfolio',0,{display:"none"});
-   gsap.to('#breaker',0,{display:"block"});
-   gsap.to('#breaker-two',0,{display:"block",delay:.1});
-gsap.to('#contact',0,{display:"none"});
-   gsap.to('#breaker',0,{display:"none",delay:2});
-   gsap.to('#breaker-two',0,{display:"none",delay:2});
-   gsap.to('#about',0,{display:"block",delay:.7});
-   gsap.to('#navigation-content',0,{display:'flex',delay:2});
- })
- $('#contact-link').on('click',function(){
-   gsap.to('#navigation-content',0,{display:"none",delay:.7});
-   gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
-gsap.to('#header',0,{display:"none"});
-gsap.to('#about',0,{display:"none"});
-gsap.to('#blog',0,{display:"none"});
-gsap.to('#portfolio',0,{display:"none"});
-gsap.to('#breaker',0,{display:"block"});
-gsap.to('#breaker-two',0,{display:"block",delay:.1});
-gsap.to('#breaker',0,{display:"none",delay:2});
-gsap.to('#breaker-two',0,{display:"none",delay:2});
-gsap.to('#contact',0,{display:"block",delay:.7});
-gsap.to('#navigation-content',0,{display:'flex',delay:2});
-})
-$('#portfolio-link').on('click',function(){
-  gsap.to('#navigation-content',0,{display:"none",delay:.7});
-  gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
-gsap.to('#header',0,{display:"none"});
-gsap.to('#about',0,{display:"none"});
-gsap.to('#contact',0,{display:"none"});
-gsap.to('#blog',0,{display:"none"});
-gsap.to('#breaker',0,{display:"block"});
-gsap.to('#breaker-two',0,{display:"block",delay:.1});
-gsap.to('#breaker',0,{display:"none",delay:2});
-gsap.to('#breaker-two',0,{display:"none",delay:2});
-gsap.to('#portfolio',0,{display:"block",delay:.7});
-gsap.to('#navigation-content',0,{display:'flex',delay:2});
-})
-$('#blog-link').on('click',function(){
-  gsap.to('#navigation-content',0,{display:"none",delay:.7});
-  gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
-gsap.to('#header',0,{display:"none"});
-gsap.to('#about',0,{display:"none"});
-gsap.to('#portfolio',0,{display:"none"});
-gsap.to('#contact',0,{display:"none"});
-gsap.to('#breaker',0,{display:"block"});
-gsap.to('#breaker-two',0,{display:"block",delay:.1});
-gsap.to('#breaker',0,{display:"none",delay:2});
-gsap.to('#breaker-two',0,{display:"none",delay:2});
-gsap.to('#blog',0,{display:"block",delay:.7});
-gsap.to('#navigation-content',0,{display:'flex',delay:2});
-})
-$('#home-link').on('click',function(){
-  gsap.to('#navigation-content',0,{display:"none",delay:.7});
-  gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
-gsap.to('#header',0,{display:"none"});
-gsap.to('#about',0,{display:"none"});
-gsap.to('#portfolio',0,{display:"none"});
-gsap.to('#contact',0,{display:"none"});
-gsap.to('#blog',0,{display:"none"});
-gsap.to('#breaker',0,{display:"block"});
-gsap.to('#breaker-two',0,{display:"block",delay:.1});
-gsap.to('#breaker',0,{display:"none",delay:2});
-gsap.to('#breaker-two',0,{display:"none",delay:2});
-gsap.to('#header',0,{display:"block",delay:.7});
-gsap.to('#navigation-content',0,{display:'flex',delay:2});
-})
+    $('#about-link').on('click', function() {
+      gsap.to('#navigation-content', { duration: 0.5, display: "none", y: '-100%', ease: "power2.inOut" });
+      gsap.to('#header', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#blog, #portfolio, #contact', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#about', { duration: 0.5, display: "block", ease: "power2.inOut" });
+      gsap.to('#navigation-content', { duration: 0.5, display: 'flex', ease: "power2.inOut" });
+    });
+
+    $('#contact-link').on('click', function() {
+      gsap.to('#navigation-content', { duration: 0.5, display: "none", y: '-100%', ease: "power2.inOut" });
+      gsap.to('#header, #about, #blog, #portfolio', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#contact', { duration: 0.5, display: "block", ease: "power2.inOut" });
+      gsap.to('#navigation-content', { duration: 0.5, display: 'flex', ease: "power2.inOut" });
+    });
+
+    $('#portfolio-link').on('click', function() {
+      gsap.to('#navigation-content', { duration: 0.5, display: "none", y: '-100%', ease: "power2.inOut" });
+      gsap.to('#header, #about, #contact, #blog', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#portfolio', { duration: 0.5, display: "block", ease: "power2.inOut" });
+      gsap.to('#navigation-content', { duration: 0.5, display: 'flex', ease: "power2.inOut" });
+    });
+
+    $('#blog-link').on('click', function() {
+      gsap.to('#navigation-content', { duration: 0.5, display: "none", y: '-100%', ease: "power2.inOut" });
+      gsap.to('#header, #about, #portfolio, #contact', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#blog', { duration: 0.5, display: "block", ease: "power2.inOut" });
+      gsap.to('#navigation-content', { duration: 0.5, display: 'flex', ease: "power2.inOut" });
+    });
+
+    $('#home-link').on('click', function() {
+      gsap.to('#navigation-content', { duration: 0.5, display: "none", y: '-100%', ease: "power2.inOut" });
+      gsap.to('#header, #about, #portfolio, #contact, #blog', { duration: 0.5, display: "none", ease: "power2.inOut" });
+      gsap.to('#header', { duration: 0.5, display: "block", ease: "power2.inOut" });
+      gsap.to('#navigation-content', { duration: 0.5, display: 'flex', ease: "power2.inOut" });
+    });
 
 })
 $(function(){
@@ -220,4 +184,29 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+$(function(){
+    $('#home-link').on('click', function() {
+        $('#header').show();
+        $('#about, #blog, #portfolio, #contact').hide();
+    });
 
+    $('#about-link').on('click', function() {
+        $('#about').show();
+        $('#header, #blog, #portfolio, #contact').hide();
+    });
+
+    $('#blog-link').on('click', function() {
+        $('#blog').show();
+        $('#header, #about, #portfolio, #contact').hide();
+    });
+
+    $('#portfolio-link').on('click', function() {
+        $('#portfolio').show();
+        $('#header, #about, #blog, #contact').hide();
+    });
+
+    $('#contact-link').on('click', function() {
+        $('#contact').show();
+        $('#header, #about, #blog, #portfolio').hide();
+    });
+});
