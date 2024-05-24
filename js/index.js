@@ -166,7 +166,7 @@ function changePage() {
 // JavaScript para detectar el scroll y ocultar o mostrar el menú
 document.addEventListener("DOMContentLoaded", function() {
   var lastScrollTop = 0;
-  var menubar = document.querySelector('.menubar');
+  var menubar = document.querySelector('.menubar',);
 
   window.addEventListener("scroll", function() {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -175,10 +175,10 @@ document.addEventListener("DOMContentLoaded", function() {
           // Bajando la página
           menubar.style.opacity = '0';
           menubar.style.transition = 'opacity 0.5s ease-in-out';
-      } else {
-          // Subiendo la página
+      } else if (scrollTop === 0) {
+          // Al llegar al tope de arriba del scroll
           menubar.style.opacity = '0.8';
-          menubar.style.transition = 'opacity 0.5s ease-in-out';
+          menubar.style.transition = 'opacity 0.1s ease-in-out';
       }
       lastScrollTop = scrollTop;
   });
@@ -210,3 +210,15 @@ $(function(){
         $('#header, #about, #blog, #portfolio').hide();
     });
 });
+
+// En el archivo js/index.js
+// Detectar el scroll y agregar clase al logo del header al hacer scroll
+document.addEventListener("scroll", function() {
+  var logo = document.querySelector('#navigation-bar img');
+  if (window.scrollY > 0) {
+      logo.classList.add('scrolled');
+  } else {
+      logo.classList.remove('scrolled');
+  }
+});
+
