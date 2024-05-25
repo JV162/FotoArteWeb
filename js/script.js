@@ -49,11 +49,11 @@ function handleModalNavigation() {
             }
         });
 
-        // Mostrar el icono animado de deslizar en la primera imagen
+        // Mostrar el icono de deslizar en la primera imagen
         const firstImage = $(".gallery-image").first();
         const swipeIcon = $("<div>")
             .addClass("swipe-icon")
-            .html('images/desliza-a-la-derecha.gif" alt="Desliza para pasar la página">')
+            .text("Desliza para pasar la página")
             .appendTo(firstImage);
     } else {
         // Mantener la navegación con flechas para laptops
