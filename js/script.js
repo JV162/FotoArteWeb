@@ -95,3 +95,4 @@ function switchImage(currentImage, targetImage) {
 function animateEntryElements() {
     // Código para animar elementos de entrada
 }
+

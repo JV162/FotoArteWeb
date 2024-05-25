@@ -2487,30 +2487,27 @@ for tabs and large phones
 }
 
 /* Estilos para el título */
-h1 {
+h2 {
     text-align: center; /* Centrar el texto horizontalmente */
     color: #ffffff; /* Color del texto */
-    font-size: 5em; /* Tamaño de la fuente */
-    margin: 5% auto; /* Espacio superior e inferior y centrar horizontalmente */
+    font-size: 5vb; /* Tamaño de la fuente */
+    margin: 5vb auto; /* Espacio superior e inferior y centrar horizontalmente */
     font-family: poppins;
 }
-
+@media (max-width: 808px) {
+    h1 {
+        font-size: 3vb; /* Reducir el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
 h3 {
     color: #ffffff; /* Cambia el color del texto */
     font-family: 'poppins'; /* Tipo de fuente */
     text-align: center; /* Alineación del texto */
-    margin: 0 auto 18px; /* Espacio debajo del encabezado y centrar horizontalmente */
-    font-size: 4vh; /* Tamaño del texto */
+    margin: 0 auto 5vb; /* Espacio debajo del encabezado y centrar horizontalmente */
+    font-size: 3vb; /* Tamaño del texto */
 }
 
-p {
-    color: #ffffff; /* Cambia el color del texto */
-    font-family: 'poppins'; /* Tipo de fuente */
-    font-size: 3vh; /* Tamaño del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
-    text-align: center; /* Alineación del texto */
-    margin: 0 auto 15px; /* Espacio debajo de cada párrafo y centrar horizontalmente */
-}
+
 
 /* Estilos para el contenedor de pestañas de álbum */
 .album-tab {
@@ -2524,8 +2521,8 @@ p {
 .album-tab a {
     text-decoration: none; /* Quitar el subrayado predeterminado */
     color: #333; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    margin: 0 10px; /* Margen entre los enlaces */
+    padding: 10vb 20vb; /* Espaciado interno */
+    margin: 0 10vb; /* Margen entre los enlaces */
     border-radius: 5px; /* Borde redondeado */
     border: 1px solid #333; /* Borde */
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
@@ -2613,14 +2610,14 @@ p {
 }
 
 h2.name {
-    font-size: 4vb; /* Tamaño de la fuente para los títulos h2 con clase 'name' */
+    font-size: 2em; /* Tamaño de la fuente para los títulos h2 con clase 'name' */
     color: #ffffff; /* Color del texto */
     font-family: 'poppins'; /* Tipo de fuente */
     text-align: center; /* Alineación del texto */
 }
 
 p.description {
-    font-size: 2vb; /* Tamaño de la fuente para los párrafos con clase 'description' */
+    font-size: 1em; /* Tamaño de la fuente para los párrafos con clase 'description' */
     color: #ffffff; /* Color del texto */
     font-family: 'poppins'; /* Tipo de fuente */
     text-align: center; /* Alineación del texto */    
@@ -2634,7 +2631,7 @@ p.description {
 .cover:hover .name,
 .cover:focus .name {
     opacity: 1;
-    transform: translateZ(50px);
+    transform: translateZ(50vb);
     text-align: center; /* Alineación del texto */
 
 }
@@ -2667,44 +2664,12 @@ p.description {
 .cover:focus p {
     display: block; /* Muestra la descripción cuando el cursor pasa sobre la imagen */
     text-align: center; /* Alineación del texto */
-
-}
-
-@media (hover: none) {
-    .cover .overlay,
-    .cover .name,
-    .cover .description {
-        opacity: 1;
-        transform: translateZ(0);
-    }
-
-    .cover p {
-        display: block;
-        text-align: center; /* Alineación del texto */
-
-    }
 }
 
 @media (max-width: 480px) {
-    .cover {
-        width: 100%; /* Ajusta el ancho para dispositivos más pequeños */
-    }
-
-    .overlay {
-        padding: 30px; /* Aumenta el padding para hacer la descripción más ancha */
-        width: 90%; /* Ajusta el ancho del overlay para que sea más ancho */
-    }
-
     .cover p {
-        margin: 2vh 0; /* Ajusta los márgenes para dispositivos más pequeños */
-    }
-}
-
-@media (hover: none) {
-    .cover .description {
-        display: block;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
+        display: block; /* Muestra la descripción al entrar en el campo de visión en móviles */
+        text-align: center; /* Alineación del texto */
     }
 }
 /* Estilos para la vista previa en pantalla completa */

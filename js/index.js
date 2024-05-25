@@ -1,16 +1,23 @@
+// Cuando la ventana se carga completamente
 $(window).on('load',function(){
+  // Animación para ocultar el loader
   gsap.to('#loader',1,{y:"-100%"});
   gsap.to('#loader',1,{opacity:0});
   gsap.to('#loader',0,{display:"none",delay:1});
+  // Mostrar el header después de la animación del loader
   gsap.to('#header',0,{display:"block",delay:1})
+  // Ocultar el contenido de navegación
   gsap.to('#navigation-content',0,{display:"none"});
+  // Mostrar el contenido de navegación después de la animación
   gsap.to('#navigation-content',0,{display:"flex",delay:1});
 })
+// Función para cambiar el color del panel
 $(function(){
   $('.color-panel').on("click",function(e) {
     e.preventDefault();
     $('.color-changer').toggleClass('color-changer-active');
 });
+// Función para cambiar el color del tema
 $('.colors a').on("click",function(e) {
   e.preventDefault();
   var attr = $(this).attr("title");
@@ -18,6 +25,7 @@ $('.colors a').on("click",function(e) {
   $('head').append('<link rel="stylesheet" href="css/'+attr+'.css">');
 });
 });
+// Función para mostrar y ocultar el menú
 $(function(){
      $('.menubar').on('click',function(){
          gsap.to('#navigation-content',.6,{y:0});
@@ -27,6 +35,7 @@ $(function(){
     });
    }); 
 
+// Función para animar el texto
 $(function(){
     var TxtRotate = function(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -85,6 +94,7 @@ $(function(){
         document.body.appendChild(css);
       };
 })
+// Función para cambiar de página
 $(function(){
 
     $('#about-link').on('click', function() {
@@ -124,6 +134,7 @@ $(function(){
     });
 
 })
+// Función para animar el cursor
 $(function(){
  var body =  document.querySelector('body');
  var $cursor = $('.cursor')
@@ -155,6 +166,7 @@ $(function(){
 
 })
 
+// Función para cambiar de página
 function changePage() {
   const currentPage = document.querySelector('.page.active');
   const nextPage = currentPage.nextElementSibling || document.querySelector('.page:first-child');
@@ -184,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// Función para cambiar de página
 $(function(){
     $('#home-link').on('click', function() {
         $('#header').show();
@@ -211,8 +224,7 @@ $(function(){
     });
 });
 
-// En el archivo js/index.js
-// Detectar el scroll y agregar clase al logo del header al hacer scroll
+// JavaScript para detectar el scroll y cambiar la opacidad del logo del header
 document.addEventListener("scroll", function() {
   var logo = document.querySelector('#navigation-bar img');
   if (window.scrollY > 0) {
@@ -221,4 +233,5 @@ document.addEventListener("scroll", function() {
       logo.classList.remove('scrolled');
   }
 });
+
 
