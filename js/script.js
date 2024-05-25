@@ -44,10 +44,12 @@ function handleModalNavigation() {
             touchEndX = event.changedTouches[0].clientX;
             const diff = touchStartX - touchEndX;
 
-            if (diff > 50) {
-                navigateImages('next');
-            } else if (diff < -50) {
-                navigateImages('prev');
+            if (Math.abs(diff) > 10) { // Cambiar el umbral según la sensibilidad deseada
+                if (diff > 0) {
+                    navigateImages('next');
+                } else {
+                    navigateImages('prev');
+                }
             }
         });
     } else {
