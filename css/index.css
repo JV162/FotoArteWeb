@@ -2739,8 +2739,6 @@ p.description {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    top: 50%;
-    pointer-events: none; /* Asegura que no bloquea clics */
 }
 
 .navigation button {
@@ -2750,7 +2748,6 @@ p.description {
     font-size: 3em; /* Aumentado para hacer los botones un poco más grandes */
     cursor: pointer;
     transition: transform 0.3s ease;
-    pointer-events: auto; /* Asegura que los botones reciben clics */
 }
 
 .navigation button:hover {
@@ -2759,31 +2756,13 @@ p.description {
 }
 
 #prev {
-    position: absolute;
     left: 1vh; /* Ajustado aún más para acercar al modal */
 }
 
 #next {
-    position: absolute;
     right: 1vh; /* Ajustado aún más para acercar al modal */
 }
 
-/* Estilos para las áreas de clic en móviles */
-.click-area {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    pointer-events: auto; /* Asegura que las áreas reciben clics */
-}
-
-#left-click-area {
-    left: 0;
-}
-
-#right-click-area {
-    right: 0;
-}
     .construction-message {
         position: fixed;
         top: 23%;
