@@ -2732,55 +2732,58 @@ p.description {
     }
 }
   
-/* Estilos para la navegación en móviles */
+/* Estilos para las flechas de navegación */
 .navigation {
-    display: none;
+    position: fixed;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    pointer-events: none; /* Asegura que no bloquea clics */
 }
 
-@media (max-width: 480px) {
-    .modal-content {
-        cursor: ew-resize;
-    }
-    .modal-content:hover {
-        cursor: ew-resize;
-    }
-    .modal-content:active {
-        cursor: grabbing;
-    }
+.navigation button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3em; /* Aumentado para hacer los botones un poco más grandes */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    pointer-events: auto; /* Asegura que los botones reciben clics */
 }
 
-@media (min-width: 481px) {
-    .navigation {
-        position: fixed;
-        transform: translateY(-50%);
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .navigation button {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 3em; /* Aumentado para hacer los botones un poco más grandes */
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-
-    .navigation button:hover {
-        color: #aaa;
-        transform: scale(1.2);
-    }
-
-    #prev {
-        left: 1vh; /* Ajustado aún más para acercar al modal */
-    }
-
-    #next {
-        right: 1vh; /* Ajustado aún más para acercar al modal */
-    }
+.navigation button:hover {
+    color: #aaa;
+    transform: scale(1.2);
 }
 
+#prev {
+    position: absolute;
+    left: 1vh; /* Ajustado aún más para acercar al modal */
+}
+
+#next {
+    position: absolute;
+    right: 1vh; /* Ajustado aún más para acercar al modal */
+}
+
+/* Estilos para las áreas de clic en móviles */
+.click-area {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    pointer-events: auto; /* Asegura que las áreas reciben clics */
+}
+
+#left-click-area {
+    left: 0;
+}
+
+#right-click-area {
+    right: 0;
+}
     .construction-message {
         position: fixed;
         top: 23%;

@@ -96,3 +96,22 @@ function animateEntryElements() {
     // Código para animar elementos de entrada
 }
 
+document.getElementById('left-click-area').addEventListener('click', function() {
+    // Lógica para mostrar la imagen anterior
+    showPreviousImage();
+});
+
+document.getElementById('right-click-area').addEventListener('click', function() {
+    // Lógica para mostrar la siguiente imagen
+    showNextImage();
+});
+
+function showPreviousImage() {
+    // Implementa aquí la lógica para mostrar la imagen anterior
+    console.log('Mostrar imagen anterior');
+}
+
+function showNextImage() {
+    // Implementa aquí la lógica para mostrar la siguiente imagen
+    console.log('Mostrar imagen siguiente');
+}
