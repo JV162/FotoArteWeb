@@ -23,14 +23,47 @@ function initializeEventListeners() {
     });
 }
 
-// Oyente para la navegación de imágenes con teclas de flecha
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'ArrowRight') {
-        document.getElementById('next').click();
-    } else if (event.key === 'ArrowLeft') {
-        document.getElementById('prev').click();
+// Verifica si el dispositivo es un móvil
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Función para manejar la navegación del modal según el tipo de dispositivo
+function handleModalNavigation() {
+    if (isMobile) {
+        // Ocultar las flechas en dispositivos móviles
+        document.getElementById('prev').style.display = 'none';
+        document.getElementById('next').style.display = 'none';
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('modal').addEventListener('touchstart', function(event) {
+            touchStartX = event.changedTouches[0].clientX;
+        });
+
+        document.getElementById('modal').addEventListener('touchend', function(event) {
+            touchEndX = event.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+
+            if (diff > 50) {
+                navigateImages('next');
+            } else if (diff < -50) {
+                navigateImages('prev');
+            }
+        });
+    } else {
+        // Mantener la navegación con flechas para laptops
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                document.getElementById('next').click();
+            } else if (event.key === 'ArrowLeft') {
+                document.getElementById('prev').click();
+            }
+        });
     }
-});
+}
+
+// Llama a la función para manejar la navegación del modal
+handleModalNavigation();
 
 // Función para abrir la galería de fotos, cargar imágenes y observar su intersección
 function openPhotosGallery(weddingId) {
