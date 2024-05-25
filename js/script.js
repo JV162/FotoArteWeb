@@ -45,13 +45,16 @@ function handleModalNavigation() {
             const diff = touchStartX - touchEndX;
 
             if (Math.abs(diff) > 10) { // Cambiar el umbral según la sensibilidad deseada
-                if (diff > 0) {
-                    navigateImages('next');
-                } else {
-                    navigateImages('prev');
-                }
+                navigateImages(diff > 0 ? 'next' : 'prev');
             }
         });
+
+        // Mostrar el icono animado de deslizar en la primera imagen
+        const firstImage = $(".gallery-image").first();
+        const swipeIcon = $("<div>")
+            .addClass("swipe-icon")
+            .html('images/desliza-a-la-derecha.gif" alt="Desliza para pasar la página">')
+            .appendTo(firstImage);
     } else {
         // Mantener la navegación con flechas para laptops
         document.addEventListener('keydown', function(event) {
